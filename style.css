@@ -1,0 +1,32 @@
+*{
+	box-sizing: border-box;
+}
+
+/*container for flexboxes*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*create four equal columns*/
+.column{
+	flex: 25%;
+	padding: 20px;
+}
+
+/*on screens that are 992px wide or lees, 
+go from four columns to two columns*/
+@media screen and (max-width: 992px){
+	.column{
+		flex: 50%;
+	}
+}
+
+/*on screens that are 600px wide or less,
+make the columns stack on top of each other
+instead of next to each other*/
+@media screen and (max-width: 600px){
+	.row{
+		flex: column;
+	}
+}
